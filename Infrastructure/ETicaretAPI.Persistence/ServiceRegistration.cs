@@ -14,7 +14,16 @@ namespace ETicaretAPI.Persistence
 	{
 		public static void AddPersistanceServices(this IServiceCollection services)
 		{
-			services.AddDbContext<ETicaretAPIDbContext>(options => options.UseNpgsql("User ID=postgres;Password=123456;Host=localhost;Port=5432;Database=ETicaretAPIDb;"));
+			services.AddDbContext<ETicaretAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString));
 		}
 	}
+
+    // Aşagıdan package manager console a gelip default procjti seçip (Infrastructure\ETicaretAPI.Persistence)
+
+
+    // --- Entitiy'yi olusturduktan sonra migration Oluşturma
+    // add-migration mig_1
+
+    // --- Oluşan migrationları veritabanına ekler.veritabanı yoksa appsetting içindeki bilgiye göre veritabanı oluşturur ve ekler
+    // update-database
 }
