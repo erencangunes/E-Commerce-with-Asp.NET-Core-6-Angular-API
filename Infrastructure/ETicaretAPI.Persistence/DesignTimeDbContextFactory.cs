@@ -13,7 +13,7 @@ namespace ETicaretAPI.Persistence
 	public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ETicaretAPIDbContext>
 	{
 
-        //Bazen cmd'den Dotnet CLI ile igration oluşturmak lazım o yüzden bunu yapmak lazım
+        //Bazen cmd'den Dotnet CLI ile migration oluşturmak lazım o yüzden bunu yapmak lazım
         public ETicaretAPIDbContext CreateDbContext(string[] args) 
 		{
 

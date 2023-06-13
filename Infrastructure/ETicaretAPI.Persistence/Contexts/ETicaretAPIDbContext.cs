@@ -30,10 +30,11 @@ namespace ETicaretAPI.Persistence.Contexts
 			foreach (var data in datas)
 			{
 
-				var result = data.State switch
+				_ = data.State switch
 				{
 					EntityState.Added => data.Entity.CreateDate = DateTime.UtcNow,
-                    EntityState.Modified => data.Entity.UpdateDate = DateTime.UtcNow
+                    EntityState.Modified => data.Entity.UpdateDate = DateTime.UtcNow,
+					_ => DateTime.UtcNow,
 
                 };
 
