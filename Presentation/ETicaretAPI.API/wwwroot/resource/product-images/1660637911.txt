@@ -1,0 +1,4 @@
+
+
+Extention fonksiyon = public static olan fonksiyonlar
+migrations

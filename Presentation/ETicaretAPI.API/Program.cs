@@ -29,6 +29,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Verileri sunucuda tutabilmek için wwwroot path'ini kullanabilmek için 
+app.UseStaticFiles();
 // Cors Politikasýnýn uygulamada middle ware olarak iþlemesini saðlýyoruz
 app.UseCors();
 app.UseHttpsRedirection();
